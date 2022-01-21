@@ -1,1 +1,7 @@
 <h1><%= @category.title %></h1>
+
+<%# Showing each offer of given category %>
+
+<% @category.offers.each do |offer| %>
+  <%= link_to offer.title, category_offer_path(offer) %>
+<% end %>
