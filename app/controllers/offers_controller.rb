@@ -7,6 +7,7 @@ class OffersController < ApplicationController
   end
 
   def show
+    authorize @offer
   end
 
   def edit
@@ -32,7 +33,7 @@ class OffersController < ApplicationController
   private
 
   def set_params
-    @offer = Offer.find(params[:id])
+    @offer = Offer.find(params[:category_id])
   end
 
   def offer_params

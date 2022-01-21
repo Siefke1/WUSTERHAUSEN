@@ -3,5 +3,5 @@
 <%# Showing each offer of given category %>
 
 <% @category.offers.each do |offer| %>
-  <%= offer.title %>
+  <%= link_to offer.title, category_offer_path(offer) %>
 <% end %>
